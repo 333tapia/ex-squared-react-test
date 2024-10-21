@@ -13,7 +13,7 @@ const TodoApp = () => {
   const inputRef = useRef(null);
 
   useEffect(() => {
-    const storedItems = JSON.parse(localStorage.getItem('items'));
+    const storedItems = JSON.parse(localStorage.getItem('items')) || [];
     if (storedItems.length > 0) {
       setItems(storedItems);
     }
@@ -68,7 +68,7 @@ const TodoApp = () => {
         <input
           type="text"
           size="30"
-          maxlength="50"
+          maxLength="50"
           ref={inputRef}
           placeholder="Add task (50 characters max)"
           onChange={handleTextChange}
