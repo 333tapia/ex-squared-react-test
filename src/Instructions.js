@@ -15,8 +15,8 @@ const Instructions = () => {
       <InstructionsContainer>
         <h1>React Class Conversion</h1>
         <ul>
-          {instructions.map((instruction) => (
-            <li>{instruction}</li>
+          {instructions.map((instruction, i) => (
+            <li key={i}>{instruction}</li>
           ))}
         </ul>
       </InstructionsContainer>
